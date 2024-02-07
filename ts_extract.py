@@ -267,7 +267,7 @@ def extract_denomination(text):
 def extract_principal(text):
 
     patterns = {
-        "pattern 3": r"Issue Date of the note\s*s:\s*(\w+\$?(\d{1,3}(?:,\d{3})*(?:\.\d+)?))",
+        "pattern 1": r"Issue Date of the note\s*s:\s*(\w+\$?(\d{1,3}(?:,\d{3})*(?:\.\d+)?))",
     }
 
     for pattern_name, pattern in patterns.items():
@@ -361,7 +361,7 @@ def extract_calculation_agent(text):
 def extract_issue_price(text):
 
     patterns = {
-        "pattern 1": r"Issue Price\s*:?\s*(\d+\.\d+)%",
+        "pattern 1": r"Issue Price\s*:?\s*(\d+\.\d+)\s*%",
     }
 
     for pattern_name, pattern in patterns.items():
@@ -486,7 +486,7 @@ def main():
             text += page.extract_text()
 
         result_df = []
-
+        print(text)
         extracted_text = extract_text_from_pdf(text,st)
 
 

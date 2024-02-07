@@ -486,7 +486,7 @@ def main():
             text += page.extract_text()
 
         result_df = []
-        print(text)
+        #print(text)
         extracted_text = extract_text_from_pdf(text,st)
 
 

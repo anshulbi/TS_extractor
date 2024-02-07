@@ -68,7 +68,7 @@ def extract_ccy(text):
 
 def extract_note_ccy(text):
     patterns = {
-        "pattern 3": r"Issue Date of the notes:\s*(\w+\$?)(\d{1,3}(?:,\d{3})*(?:\.\d+)?)",
+        "pattern 3": r"Issue Date of the note\s*s:\s*(\w+\$?)(\d{1,3}(?:,\d{3})*(?:\.\d+)?)",
     }
 
     for pattern_name, pattern in patterns.items():
